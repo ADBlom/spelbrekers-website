@@ -8,6 +8,10 @@
   --purple: #804ee6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 b {
     font-weight: bold;
 }
