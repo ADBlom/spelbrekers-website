@@ -3,7 +3,6 @@ document.getElementById("socials2").innerHTML = document.getElementById("socials
 let activeSection
 
 function onScroll() {
-  console.log(window.scrollY);
   if(window.scrollY < 780) {
     activeSection = "home-nav"
   }
