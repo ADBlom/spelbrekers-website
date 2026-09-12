@@ -83,7 +83,7 @@ h3 {
 }
 
 .production-section {
-    padding: 75px 50px;
+    padding: 80px clamp(28px, calc(24.2% - 83px), 400px);
     flex: 1 1 400px; 
     color: var(--dark-green);
     display: flex;
