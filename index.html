@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stichting Spelbrekers</title>
 <meta name="description" content="Een Utrechtse musicalstichting die tradities in de musicalmarkt doorbreekt met originele voorstellingen en vernieuwende projecten.">
+<link rel="icon" type="image/png" href="S.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -13,9 +14,26 @@
 
 <body>
 
-
+    <div class="navigation-desktop">
+        <a href="#home" class="navigation-desktop-item" id="home-nav">
+            Home
+            <div class="navigation-dot"></div>
+        </a>
+        <a href="#producties" class="navigation-desktop-item" id="producties-nav">
+            Producties
+            <div class="navigation-dot"></div>
+        </a>
+        <a href="#over-ons" class="navigation-desktop-item" id="over-ons-nav">
+            Over ons
+            <div class="navigation-dot"></div>
+        </a>
+        <a href="#steun-ons" class="navigation-desktop-item" id="steun-ons-nav">
+            Steun ons
+            <div class="navigation-dot"></div>
+        </a>
+    </div>
     
-    <div class="section" style="background: var(--darkest-green);">
+    <div id="home" class="section" style="background: var(--darkest-green);">
 
         <div style="width: 100%; margin-top: 20%">
             <svg viewBox="0 0 1538.1 182.1" fill="var(--bright-mint)">
@@ -98,7 +116,7 @@
     </div>
 
 
-    <div class="section" style="background: var(--mid-mint);">
+    <div id="producties" class="section" style="background: var(--mid-mint);">
         <h1>Producties</h1>
     </div>
     
@@ -123,7 +141,7 @@
     </div>
 
 
-    <div class="section" style="background: var(--dark-green);">
+    <div id="over-ons" class="section" style="background: var(--dark-green);">
         <div class="over-ons-sectie">
             <h1>Over ons</h1>
             <p>Spelbrekers is een jonge Utrechtse musicalstichting met de missie om bestaande kaders binnen het Nederlandse musicallandschap te doorbreken. Op deze manier willen wij de huidige definitie van het begrip ‘musical’ uitbreiden zodat een zo groot mogelijk publiek kennis kan maken met de ontzettend sterke zeggingskracht van musical.<br><br>Dit doen we door originele voorstellingen te schrijven en produceren en door vernieuwende projecten te organiseren. Een echte Spelbreker breekt met tradities rondom muzikale en theatrale vormen en schuwt niet om maatschappijkritische onderwerpen aan te snijden. Maar altijd gebruikt Spelbrekers de kracht van musical om het publiek omver te blazen.</p>
@@ -140,11 +158,11 @@
     </div>
 
 
-    <div class="section" style="background: var(--darkest-green);">
+    <div id="steun-ons" class="section" style="background: var(--darkest-green);">
         <div style="max-width: 640px">
             <h1 style="color: var(--bright-mint)">Steun ons</h1>
             <p style="margin-bottom: 45px"><br>Zou jij ons willen helpen in onze missie om het Nederlandse musicallandschap te veranderen? Doneer en word een Spelbreker, want dankzij jouw donatie kunnen wij projecten opzetten die ons verder helpen.<br><b>Met jou breken we de norm!</b></p>
-            <a href="https://www.paypal.com/donate/?hosted_button_id=TNF9439XZT7RY" target="_blank"><button>Doneer!</button></a>
+            <a href="https://www.paypal.com/donate/?hosted_button_id=TNF9439XZT7RY" target="_blank"><button class="special-button">Doneer!</button></a>
         </div>
     </div>
 
