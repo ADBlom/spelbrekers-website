@@ -178,6 +178,10 @@ h3 {
     .navigation-desktop {
         visibility: hidden;
     }
+
+    .over-ons-sectie {
+        text-align: left;
+    }
 }
 
 .navigation-desktop-item {
