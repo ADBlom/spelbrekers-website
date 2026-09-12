@@ -3,20 +3,19 @@ document.getElementById("socials2").innerHTML = document.getElementById("socials
 let activeSection
 
 function onScroll() {
-  if(window.scrollY < 780) {
-    activeSection = "home-nav"
-  }
-  if(window.scrollY >= 780 && window.scrollY < 4300) {
-    activeSection = "producties-nav"
-  }
-  if(window.scrollY >= 4300 && window.scrollY < 5600) {
-    activeSection = "over-ons-nav"
-  }
-  if(window.scrollY >= 5600) {
-    activeSection = "steun-ons-nav"
-  }
+  const sections = document.querySelectorAll(".section");
+    let activeSection = null;
+    let bestDistance = 0;
+
+    sections.forEach(section => {
+      const distance = section.getBoundingClientRect().y;
+      if ((distance < 350 && distance >= bestDistance) || distance < bestDistance) {
+        bestDistance = distance;
+        activeSection = section;
+      }
+    });
   document.getElementsByClassName("navigation-active")[0]?.classList.remove("navigation-active");
-  document.getElementById(activeSection).classList.add("navigation-active");
+  document.getElementById(`${activeSection.id}-nav`).classList.add("navigation-active");
 };
 
 onScroll();
