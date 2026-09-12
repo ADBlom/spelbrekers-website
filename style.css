@@ -25,17 +25,24 @@ a:hover {
 }
 
 button {
-    border-radius: 28px;
-    padding: 9px 40px;
-    border: none;
-    background: var(--bright-mint);
     color: white;
     font-family: 'Sora';
     font-size: 17px;
     font-weight: bold;
+    border: none;
 }
 
 button:hover {
+    cursor: pointer;
+}
+
+.special-button {
+    border-radius: 28px;
+    padding: 9px 40px;
+    background: var(--bright-mint);
+}
+
+.special-button:hover {
     background-color: var(--purple);
     cursor: pointer;
 }
@@ -151,4 +158,51 @@ h3 {
     display: flex;
     gap: 75px;
     flex-direction: column;
+}
+
+.navigation-desktop {
+    position: fixed;
+    right: 0px;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    margin: 40px;
+    gap: 6.5px;
+}
+
+.navigation-desktop-item {
+    display: flex;
+    align-items: center;
+    background: none;
+    font-weight: 300;
+    padding: 0px;
+    font-size: 16px;
+    line-height: 1.4em;
+    text-decoration: none;
+}
+
+.navigation-desktop-item:hover {
+    color: var(--bright-mint);
+}
+
+.navigation-desktop-item:hover .navigation-dot {
+    background-color: var(--bright-mint);
+    border-color: var(--bright-mint);
+}
+
+.navigation-active {
+    color: var(--purple);
+}
+
+.navigation-active .navigation-dot {
+    background-color: var(--purple);
+    border-color: var(--purple);
+}
+
+.navigation-dot {
+    width: 7px;
+    height: 7px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-left: 16px;
 }
