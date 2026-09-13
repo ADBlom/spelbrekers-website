@@ -57,7 +57,7 @@ button:hover {
 
 body {
     font-family: sora;
-    font-size: 17px;
+    font-size: min(17px, 4vw);
     letter-spacing: 0em;
     line-height: 1.7em;
     font-weight: 300;
