@@ -3,7 +3,7 @@
   --dark-green: #0b453a;
   --mid-mint: #aacbc4;
   --bright-mint: #2fa98c;
-  --light-mint: #aacbc480;
+  --light-mint: #cde1dd;
   --lightest-mint: #f1f7f6;
   --purple: #804ee6;
 }
@@ -220,4 +220,92 @@ h3 {
     border: 3px solid white;
     border-radius: 50%;
     margin-left: 16px;
+}
+
+
+
+
+
+
+
+
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--darkest-green);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 20px 28px;
+  visibility: hidden;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--white);
+  font-size: 1rem;
+}
+.nav-logo {
+  width: 36px;
+}
+
+.nav-links {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(50vw, 320px);
+    background: var(--light-mint);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 2.2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    gap: 1.6rem;
+}
+
+.nav-links a {
+    color: var(--darkest-green);
+    font-weight: 400;
+    font-size: 0.95rem;
+    position: relative;
+    text-decoration: none;
+    padding: 0.2rem 0;
+}
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 110;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+@media (max-width: 1000px) {
+    .nav-links.open { transform: translateX(0); }
+    .site-nav { visibility: visible; }
 }
