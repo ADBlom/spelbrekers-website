@@ -28,6 +28,10 @@ a:hover {
     color: var(--purple);
 }
 
+a:hover svg {
+    fill: var(--purple);
+}
+
 button {
     color: white;
     font-family: 'Sora';
@@ -63,6 +67,10 @@ body {
 
 p {
     margin: 0px;
+}
+
+.fill-white {
+    fill: white;
 }
 
 h1 {
