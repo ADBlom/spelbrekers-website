@@ -75,7 +75,7 @@ p {
 
 h1 {
     font-weight: bold;
-    font-size: 55px;
+    font-size: min(55px, 9vw);
     line-height: 1em;
     letter-spacing: 0.02rem;
     margin: 0px;
