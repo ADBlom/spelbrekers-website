@@ -75,7 +75,7 @@ p {
 
 h1 {
     font-weight: bold;
-    font-size: 55px;
+    font-size: min(55px, 9vw);
     line-height: 1em;
     letter-spacing: 0.02rem;
     margin: 0px;
@@ -83,7 +83,7 @@ h1 {
 
 h2 {
     font-weight: bold;
-    font-size: 34px;
+    font-size: min(34px, 6vw);
     letter-spacing: 0em;
     margin: 0px 0px 45px;
 }
@@ -108,6 +108,11 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.production-header {
+    padding: min(80px, 8vw);
+    text-align: center;
 }
 
 .footer {
@@ -164,7 +169,7 @@ h3 {
 
 .productie-foto {
     max-width: calc(100% - 10px);
-    margin: 0px 0px 75px;
+    margin: 0px 0px 28px;
 }
 
 .over-ons-sectie {
@@ -190,6 +195,14 @@ h3 {
     }
 
     .over-ons-sectie {
+        text-align: left;
+    }
+
+    .steun-ons-section {
+        text-align: left;
+    }
+
+    .production-header {
         text-align: left;
     }
 }
@@ -329,3 +342,75 @@ h3 {
     .nav-links.open { transform: translateX(0); }
     .site-nav { visibility: visible; }
 }
+
+
+
+
+
+
+
+
+.carousel{
+    position: relative;
+    width: 100%;
+    height: max(38vw, 240px);
+    background-color: var(--darkest-green);
+  }
+ 
+  .carousel-viewport{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+ 
+  .carousel-track{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 16px;
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+ 
+  .carousel-track img{
+    height: 100%;
+    width: auto;
+    flex: 0 0 auto;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+ 
+  .carousel-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.15s ease;
+    z-index: 2;
+  }
+ 
+  .carousel-arrow:hover {
+    color: var(--purple);
+  }
+ 
+  .carousel-arrow:active{
+    transform: translateY(-50%) scale(0.96);
+  }
+ 
+  .carousel-arrow--prev{ left: 16px; }
+  .carousel-arrow--next{ right: 16px; }
+ 
+  .carousel-arrow.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+ 
+  @media (prefers-reduced-motion: reduce){
+    .carousel-track{
+      transition: none;
+    }
+  }
