@@ -83,7 +83,7 @@ h1 {
 
 h2 {
     font-weight: bold;
-    font-size: 34px;
+    font-size: min(34px, 6vw);
     letter-spacing: 0em;
     margin: 0px 0px 45px;
 }
@@ -164,7 +164,7 @@ h3 {
 
 .productie-foto {
     max-width: calc(100% - 10px);
-    margin: 0px 0px 75px;
+    margin: 0px 0px 28px;
 }
 
 .over-ons-sectie {
