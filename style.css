@@ -110,6 +110,11 @@ h3 {
     align-items: center;
 }
 
+.production-header {
+    padding: min(80px, 8vw);
+    text-align: center;
+}
+
 .footer {
     background: var(--light-mint);
     color: var(--dark-green);
@@ -194,6 +199,10 @@ h3 {
     }
 
     .steun-ons-section {
+        text-align: left;
+    }
+
+    .production-header {
         text-align: left;
     }
 }
